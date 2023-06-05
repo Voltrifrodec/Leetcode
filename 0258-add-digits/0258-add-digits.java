@@ -1,6 +1,9 @@
 class Solution {
     public int addDigits(int num) {
-        return num == 0 ? 0 : num % 9 == 0 ? 9 : num % 9;
+        // Based from the Solution section:
+        return num == 0 ? 0 : (num % 9 == 0 ? 9 : num % 9);
+        
+        // My previous solution:
 //         char[] arr = Integer.toString(num).toCharArray();
 //         if(arr.length == 1)
 //             return num;
