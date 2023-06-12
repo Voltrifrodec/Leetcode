@@ -10,7 +10,7 @@ class Solution {
             if(temp != nums[i])
                 result.add(temp + "->" + nums[i]);
             else
-                result.add(String.valueOf(temp));
+                result.add(String.valueOf(temp)); // String.valueOf(temp) is much better than Integer.toString(temp) (+40% ???)
         }
         return result;
     }
