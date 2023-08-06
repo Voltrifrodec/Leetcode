@@ -12,7 +12,6 @@ class Solution {
                 max = temp;
         }
 
-        System.out.println(max); // Debug
         return max;
 
     }
