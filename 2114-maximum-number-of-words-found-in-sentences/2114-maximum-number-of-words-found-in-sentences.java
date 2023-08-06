@@ -1,20 +1,19 @@
 class Solution {
     public int mostWordsFound(String[] sentences) {
 
-        ArrayList<Integer> wordsCount = new ArrayList<Integer>();
-
-        for(int i = 0; i < sentences.length; i++) {
-            char sentence[] = sentences[i].toCharArray();
-            int tempWordCount = 1;
-            for(int j = 0; j < sentence.length; j++) {
-                if(sentence[j] == ' ')
-                    tempWordCount++;
+        int max = 0;
+        for(String sentence: sentences) {
+            int temp = 1;
+            for(int i = 0; i < sentence.length(); i++) {
+                if(sentence.charAt(i) == ' ')
+                    temp++;
             }
-            wordsCount.add(tempWordCount);
-
+            if(temp > max)
+                max = temp;
         }
 
-        System.out.println(Collections.max(wordsCount)); // Debug
-        return Collections.max(wordsCount);
+        System.out.println(max); // Debug
+        return max;
+
     }
 }
