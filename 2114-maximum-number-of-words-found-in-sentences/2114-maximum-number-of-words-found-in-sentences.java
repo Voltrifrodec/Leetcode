@@ -7,7 +7,8 @@ class Solution {
             for(int i = 0; i < sentence.length(); i++) {
                 temp = sentence.charAt(i) == ' ' ? temp + 1 : temp;
             }
-            max = temp > max ? temp : max;
+            if(temp > max)
+                max = temp;
         }
 
         return max;
