@@ -6,11 +6,8 @@ class Solution {
             int temp = 1;
             for(int i = 0; i < sentence.length(); i++) {
                 temp = sentence.charAt(i) == ' ' ? temp + 1 : temp;
-                // if(sentence.charAt(i) == ' ')
-                //     temp++;
             }
-            if(temp > max)
-                max = temp;
+            max = temp > max ? temp : max;
         }
 
         return max;
