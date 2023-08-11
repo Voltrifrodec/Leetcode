@@ -1,26 +1,20 @@
 class Solution {
     public List<String> fizzBuzz(int n) {
-
         List<String> result = new ArrayList<String>();
-        String temp = "";
         for(int i = 0; i < n; i++) {
+            result.add("");
             if((i + 1) % 3 == 0) {
-                temp += "Fizz";
+                result.set(i, "Fizz");
             }
             if((i + 1) % 5 == 0) {
-                temp += "Buzz";
+                result.set(i, result.get(i) + "Buzz");
             }
-            if(temp != "")
-                result.add(temp);
-            else
-                result.add(Integer.toString(i + 1));
+            else if(result.get(i) == "")
+                result.set(i, Integer.toString(i + 1));
 
-            temp = "";
-            System.out.print(result.get(i) + " ");
+            // System.out.print(result.get(i) + " ");
         }
-        System.out.println();
-
+        // System.out.println();
         return result;
-
     }
 }
