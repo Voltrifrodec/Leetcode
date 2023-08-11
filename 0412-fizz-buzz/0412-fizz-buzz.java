@@ -1,18 +1,17 @@
 class Solution {
     public List<String> fizzBuzz(int n) {
         List<String> result = new ArrayList<String>();
-        for(int i = 0; i < n; i++) {
-            result.add("");
-            if((i + 1) % 3 == 0) {
-                result.set(i, "Fizz");
-            }
-            if((i + 1) % 5 == 0) {
-                result.set(i, result.get(i) + "Buzz");
-            }
-            else if(result.get(i) == "")
-                result.set(i, Integer.toString(i + 1));
+        for(int i = 1; i <= n; i++) {
+            if(i % 3 == 0 && i % 5 == 0)
+                result.add("FizzBuzz");
+            else if(i % 3 == 0)
+                result.add("Fizz");
+            else if(i % 5 == 0)
+                result.add("Buzz");
+            else
+                result.add(Integer.toString(i));
 
-            // System.out.print(result.get(i) + " ");
+            // System.out.print(result.get(i - 1) + " ");
         }
         // System.out.println();
         return result;
