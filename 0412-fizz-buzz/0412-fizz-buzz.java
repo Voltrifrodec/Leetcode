@@ -10,10 +10,7 @@ class Solution {
                 result.add("Buzz");
             else
                 result.add(Integer.toString(i));
-
-            // System.out.print(result.get(i - 1) + " ");
         }
-        // System.out.println();
         return result;
     }
 }
