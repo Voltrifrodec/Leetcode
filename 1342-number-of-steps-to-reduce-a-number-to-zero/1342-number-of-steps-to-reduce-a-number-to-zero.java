@@ -7,7 +7,6 @@ class Solution {
             steps++;
         }
 
-        // System.out.println(steps);
         return steps;
     }
 }
