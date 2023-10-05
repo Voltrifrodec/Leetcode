@@ -1,7 +1,7 @@
 class Solution {
     public List<Integer> majorityElement(int[] nums) {
 
-        Map<Integer, Integer> uniqueValues = new HashMap<Integer, Integer>();
+        Map<Integer, Integer> uniqueValues = new HashMap<>();
 
         for(int num : nums) {
             if(uniqueValues.containsKey(num)) {
@@ -12,7 +12,7 @@ class Solution {
             }
         }
 
-        List<Integer> values = new ArrayList<Integer>();
+        List<Integer> values = new ArrayList<>();
         for(Map.Entry<Integer, Integer> value: uniqueValues.entrySet()) {
             int valueInt = value.getValue();
             if(valueInt > (nums.length / 3)) {
