@@ -4,8 +4,8 @@ class Solution:
         str1 = []
         str2 = []
                 
-        for i in s:
-            str1.append(s.index(i))
+        str1.extend(s.index(i) for i in s)
+        
         for i in t:
             str2.append(t.index(i))
         
