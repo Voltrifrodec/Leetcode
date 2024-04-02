@@ -5,9 +5,7 @@ class Solution:
         str2 = []
                 
         str1.extend(s.index(i) for i in s)
-        
-        for i in t:
-            str2.append(t.index(i))
-        
+        str2.extend(t.index(i) for i in t)
+                
         return True if str1 == str2 else False
         
