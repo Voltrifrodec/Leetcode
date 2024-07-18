@@ -4,13 +4,11 @@
  */
 var countKeyChanges = function(s) {
     
-    let changes = 0;
+    var changes = 0;
     s = s.toLowerCase();
-    let last_used = s[0];
     for(let i = 1; i < s.length; i++) {
-        if(last_used != s[i]) {
+        if(s[i - 1] != s[i]) {
             changes++;
-            last_used = s[i];
         }
     }
         
