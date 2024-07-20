@@ -1,5 +1,3 @@
-# Write your MySQL query statement below
-# Didn't find solution with subquery for now, will use LEFT JOIN for now
 SELECT employee_id
 FROM Employees
 WHERE
@@ -7,4 +5,3 @@ WHERE
     manager_id IS NOT NULL AND
     manager_id NOT IN (SELECT employee_id FROM Employees)
 ORDER BY employee_id;
-    
